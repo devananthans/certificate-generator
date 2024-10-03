@@ -4,14 +4,14 @@ import pandas as pd
 import os
 
 # Set up font, font color, and certificate dimensions
-FONT_FILE = r'C:\Users\Lakshmi\Desktop\certificate-generator\Roboto-BlackItalic.ttf'  # Correct path to font file
+FONT_FILE = r'C:\Users\Deva\Desktop\certificate-generator\Roboto-BlackItalic.ttf'  # Correct path to font file
 FONT_COLOR = "#1E49E2"
 WIDTH, HEIGHT = 720, 509  # Dimensions of your certificate image
 
 def make_cert(name):
     """Function to generate a certificate with the given name."""
     # Load the certificate template image
-    image_source = Image.open(r'C:\Users\Lakshmi\Desktop\certificate-generator\certificate.jpg')  # Correct path to uploaded image
+    image_source = Image.open(r'C:\Users\Deva\Desktop\certificate-generator\certificate.jpg')  # Correct path to uploaded image
     # Create a draw object
     draw = ImageDraw.Draw(image_source)
     # Load the font
@@ -43,7 +43,7 @@ output_dir = './out/'
 os.makedirs(output_dir, exist_ok=True)
 
 # Read names from an Excel file (assuming the names are in a column named 'Name')
-df = pd.read_excel(r'C:\Users\Lakshmi\Desktop\certificate-generator\data.xlsx')
+df = pd.read_excel(r'C:\Users\Deva\Desktop\certificate-generator\data.xlsx')
 names = df['Name'].tolist()
 
 # Generate and save certificates
